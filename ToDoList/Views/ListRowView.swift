@@ -25,7 +25,7 @@ struct ListRowView: View {
 
 #Preview {
 
-        ListRowView(item: ItemModel(title: "First item!", isCompeted: false))
+    ListRowView(item: ItemModel(title: "First item!", isCompleted: false))
         .previewLayout(.sizeThatFits)
 }
 
