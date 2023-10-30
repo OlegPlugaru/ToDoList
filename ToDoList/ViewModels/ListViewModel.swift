@@ -24,11 +24,12 @@ class ListViewModel: ObservableObject {
             saveItems()
         }
     }
+    
     let itemsKey: String = "items_list"
+    
     init() {
         getItems()
     }
-    
     
     func getItems() {
         guard let data = UserDefaults.standard.data(forKey: itemsKey),
@@ -56,8 +57,6 @@ class ListViewModel: ObservableObject {
             items[index] = item.updateCompletion()
         }
     }
-    
-    
     
     func saveItems() {
         if let encodedData = try? JSONEncoder().encode(items) {
